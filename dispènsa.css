@@ -372,28 +372,66 @@ h2 {
         margin: 0 auto;
     }
 
-    /* Alinear imagen de forma responsiva */
+    .header-img {
+        width: 80%;
+        text-align: center;
+    }
+
     .header-img img {
         width: 80%;
-        margin: 0 auto;
-        display: block;
     }
 
-    /* Asegurar que los cuadros de información se alineen bien en móviles */
-    .general-cad {
+    .general {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .general-1 {
         width: 100%;
-        margin-bottom: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        order: 2;
     }
 
-    /* Ajuste del footer */
+    .general-2 {
+        width: 100%;
+        margin: 0 0 40px 0;
+        text-align: center;
+    }
+
+    .general-cad {
+        margin: 0 0 25px 0;
+    }
+
+    .bg-1, .bg-2, .bg-3 {
+        width: 100%;
+    }
+
+    .information {
+        padding: 30px;
+    }
+
+    .information-content {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    .information-1 {
+        text-align: center;
+        margin: 0 0 45px 0;
+    }
+
     .footer {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .footer-txt {
-        margin-bottom: 20px;
+        padding-right: 0;
+    }
+
+    .footer-socials {
+        margin-top: 50px;
     }
 }
 
