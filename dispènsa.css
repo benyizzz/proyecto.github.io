@@ -304,14 +304,18 @@ h2 {
     height: 30px;
 }
 
-/* Media Queries para pantallas pequeñas */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 991px) {
+
     .menu {
-        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .menu label {
-        display: initial;
+        display: block;
+        cursor: pointer;
     }
 
     .menu .navbar {
@@ -319,96 +323,77 @@ h2 {
         top: 100%;
         right: 0;
         left: 0;
-        background-color: #f0efefa1;
+        background-color: #f0efef;
         display: none;
+        text-align: center;
+    }
+
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+
+    .menu .navbar ul {
+        padding: 0;
     }
 
     .menu .navbar ul li {
         width: 100%;
+        display: block;
     }
 
-    #menu:checked ~ .navbar {
-        display: initial;
-    }
-
-    .header {
-        height: auto;
-        min-height: 1000px;
-        background-color: #f5f9fc;
-    }
-
-    .header-content {
-        flex-direction: column;
-        padding: 50px 30px 20px 30px;
-        margin: 0;
-    }
-
-    .header-txt {
-        width: 100%;
-        margin-right: 0;
+    .menu .navbar ul li a {
+        display: block;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
         text-align: center;
+    }
+
+    
+    .header-txt h1 {
+        font-size: 28px; 
+        line-height: 1.2;
+    }
+
+    .header-txt p {
+        font-size: 16px;
+        color: #656875;
         margin-bottom: 25px;
-    }
-
-    .header-img {
-        width: 80%;
         text-align: center;
     }
 
+    /* Ajustes del botón "Mas.." */
+    .btn-1 {
+        display: block;
+        padding: 12px 20px;
+        background-color: #2825b6;
+        font-size: 16px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* Alinear imagen de forma responsiva */
     .header-img img {
         width: 80%;
+        margin: 0 auto;
+        display: block;
     }
 
-    .general {
-        padding: 30px;
-        flex-direction: column;
-    }
-
-    .general-1 {
-        width: 100%;
-        flex-direction: column;
-        order: 2;
-    }
-
-    .general-2 {
-        width: 100%;
-        margin: 0 0 40px 0;
-        text-align: center;
-    }
-
+    /* Asegurar que los cuadros de información se alineen bien en móviles */
     .general-cad {
-        margin: 0 0 25px 0;
-    }
-
-    .bg-1, .bg-2, .bg-3 {
         width: 100%;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
-    .information {
-        padding: 30px;
-    }
-
-    .information-content {
-        margin-top: 30px;
-        flex-direction: column;
-    }
-
-    .information-1 {
-        text-align: center;
-        margin: 0 0 45px 0;
-    }
-
+    /* Ajuste del footer */
     .footer {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 
     .footer-txt {
-        padding-right: 0;
-    }
-
-    .footer-socials {
-        margin-top: 50px;
+        margin-bottom: 20px;
     }
 }
+
